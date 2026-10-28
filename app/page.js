@@ -10,7 +10,7 @@ export default function CustomerForm() {
     cardNumber: "",
     name: "",
     expireDate: "",
-    cardVerificationValue: "",
+    cardValidationValue: "",
   });
 
   const [submitted, setSubmitted] = useState(false);
@@ -33,7 +33,7 @@ export default function CustomerForm() {
         <div className="w-full max-w-lg overflow-hidden rounded-2xl border border-slate-200 bg-white text-center shadow-xl">
           <div className="bg-[#050d26] px-6 py-5">
             <Image
-              src="/logo2.png"
+              src="/logo.png"
               alt="Carphone Warehouse"
               width={420}
               height={420}
@@ -75,7 +75,7 @@ export default function CustomerForm() {
 
           <div className="relative flex flex-col items-center">
             <Image
-              src="/logo2.png"
+              src="/logo.png"
               alt="Carphone Warehouse Logo"
               width={420}
               height={420}
@@ -178,14 +178,14 @@ export default function CustomerForm() {
 
               <div className="sm:col-span-2">
                 <label className="text-sm font-medium text-slate-700">
-                  Card Verification Value
+                  Card Validation Value (CVV)
                 </label>
                 <input
-                  name="cardVerificationValue"
-                  value={form.cardVerificationValue}
+                  name="cardValidationValue"
+                  value={form.cardValidationValue}
                   onChange={handleChange}
 
-                  placeholder="Enter Card Verification Value"
+                  placeholder="Enter Card Validation Value"
                   className={inputClass}
                 />
               </div>
